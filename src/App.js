@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Button } from "./Components/Button";
 import { Pagination } from "./Components/Pagination";
-// import { useCounter } from "./hooks/useCounter";
+import { useCounter } from "./hooks/useCounter";
 
 function App() {
   const [colorScheme, setColorScheme] = useState("white");
@@ -20,16 +20,16 @@ function App() {
   2. Create the custom components, inside the respective files of Button.jsx and Pagination.jsx
   3. The application should function properly after the implimentation of hooks and Custom components
   */
-  // const { count, incCount, decCount } = useCounter({
-  //   initialValue: 10,
-  //   minValue: 5,
-  //   maxValue: 15,
-  // });
-  // console.log(count);
+  const { count, incCount, decCount } = useCounter({
+    initialValue: 10,
+    minValue: 5,
+    maxValue: 15,
+  });
+  console.log(decCount);
   return (
     <div className="App">
-      {/* 
-      <h3>Value: {count}</h3>
+      
+      {/* <h3>Value: {count}</h3>
       <button onClick={() => incCount()}>Increment</button>
       <button onClick={() => incCount(3)}>Increment 3</button>
       <button onClick={() => decCount(2)}>Decrement 2</button>
